@@ -1,0 +1,28 @@
+listI = (sI, mI, bI, eI, spI)
+listS = (sS, mS, bS, eS)
+listL = (aL, mL, iL, eL, spL)
+
+for i in list(I, S, L)
+	if len(i) > (100, 50, 10):
+		print "big, short, list..."
+	else:
+		print " ... "
+Integer.
+thats a small number
+thats a small number
+That's a big number
+thats a small number
+thats a small number
+
+String.
+short sentence
+short sentence
+long sentence
+short sentence
+
+List.
+short list
+short list
+big list
+short list
+short list

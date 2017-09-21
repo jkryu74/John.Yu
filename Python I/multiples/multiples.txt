@@ -1,0 +1,18 @@
+1. Multiples
+part I.
+range(1, 1000, 2)
+partII.
+range(0, 1,000,000, 5)
+
+2. Sum List
+a = [1, 2, 5, 10, 255, 3]
+b= sum(a)
+print b
+>>>276
+
+3. Average List
+def mean(i)
+	return float(sum(i))/max(len(i), 0)
+...
+print mean(a)
+>>>46.0
