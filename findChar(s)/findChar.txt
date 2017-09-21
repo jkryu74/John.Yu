@@ -1,8 +1,0 @@
-for i in word_list:
-	if len(i) -- 5:
-		newList.append(i)
-	else:
-		pass
-
->>>print newList
-['hello','world']
