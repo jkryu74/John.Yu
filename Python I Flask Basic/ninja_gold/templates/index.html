@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  </head>
+  <body>
+    <div id="one" class='box'>
+      <p>
+        <b><u>Your Gold:</u></b>
+      </p>
+        {{session['pot']}}
+    </div>
+    <form id="restart" action="/reset" method="post">
+      <input id="restartbttn" type="submit" value="Restart">
+    </form>
+      <div class='box'>
+        <h3>Farm</h3>
+        <p>earns 5-10 gold</p>
+        <form class="farm" action="/next" method="post">
+          <input type="hidden" name="open" value="farm">
+          <input type="submit" value="Find Gold">
+        </form>
+      </div>
+      <div class='box'>
+        <h3>Cave</h3>
+        <p>earns 10-25 gold</p>
+        <form class="cave" action="/next" method="post">
+          <input type="hidden" name="open" value="cave">
+          <input type="submit" value="Find Gold">
+        </form>
+      </div>
+      <div class='box'>
+        <h3>House</h3>
+        <p>earns 2-5 gold</p>
+        <form class="house" action="/next" method="post">
+          <input type="hidden" name="open" value="house">
+          <input type="submit" value="Find Gold">
+        </form>
+      </div>
+      <div class='box'>
+        <h3>Casino</h3>
+        <p>earns/takes 0-50 gold</p>
+        <form class="casino" action="/next" method="post">
+          <input type="hidden" name="open" value="casino">
+          <input type="submit" value="Find Gold">
+        </form>
+      </div>
+    <div class='foot'>
+      <b><u>Activities:</u></b><br><br>
+      <span>
+        {{session['data']}}
+      </span>
+    </div>
+  </body>
+</html>

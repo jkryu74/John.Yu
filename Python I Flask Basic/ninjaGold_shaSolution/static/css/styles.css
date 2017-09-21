@@ -1,0 +1,38 @@
+#restart{
+  display: inline-block;
+}
+#restartButton{
+  box-shadow: 2px 2px 2px black;
+  vertical-align: top;
+}
+p{
+  display: inline-block;
+}
+h3{
+  display: inline;
+  border: 2px solid black;
+  padding: 0px 100px 0px 5px
+}
+h2{
+  text-align: center;
+}
+.button{
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 10px;
+}
+.building{
+  display: inline-block;
+  width: 20%;
+  border: 2px solid black;
+}
+.building p{
+  text-align: center;
+}
+form{
+  text-align: center;
+}
+#results{
+  width: 90%;
+  border: 2px solid black;
+  height: 300px;
+}

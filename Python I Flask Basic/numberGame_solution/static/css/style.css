@@ -1,0 +1,23 @@
+h2, p, form{
+  text-align: center;
+}
+#high, #low{
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  color: white;
+  background-color: red;
+  padding-top: 25px;
+  text-align: center;
+  margin: 0px auto;
+}
+#right{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  color: white;
+  background-color: green;
+  padding-top: 25px;
+  text-align: center;
+  margin: 0px auto;
+}

@@ -1,0 +1,34 @@
+#header p{
+    display: inline-block;
+}
+
+#header p:nth-child(2){
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.box{
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+    border: 3px solid black;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+input[type="submit"]{
+
+    font-size: 15px;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+}
+
+#activities{
+    overflow-y: auto;
+    width: 900px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 10px
+}

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Ninja Gold</title>
+         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
+    </head>
+    <body>
+        <div id="header">
+            <p>Your Gold count</p>
+            <p>{{session['goldcount']}}</p>
+        </div>
+
+        <div class="box">
+            <p>House</p>
+            <p>(5-10 Golds)</p>
+            <form action="/process_gold" method="post">
+                <input type="hidden" name="action" value="house">
+                <input type="submit" value="Find Gold">
+            </form>
+
+        </div>
+        <div class="box">
+            <p>Farm</p>
+            <p>(10-15 Golds)</p>
+            <form action="/process_gold" method="post">
+                <input type="hidden" name="action" value="farm">
+                <input type="submit" value="Find Gold">
+            </form>
+
+        </div>
+        <div class="box">
+            <p>Cave</p>
+            <p>(2-5 Golds)</p>
+            <form action="/process_gold" method="post">
+                <input type="hidden" name="action" value="cave">
+                <input type="submit" value="Find Gold">
+            </form>
+
+        </div>
+        <div class="box">
+            <p>Casino</p>
+            <p>(Lose or earn upto 50 Golds)</p>
+            <form action="/process_gold" method="post">
+                <input type="hidden" name="action" value="casino">
+                <input type="submit" value="Find Gold">
+            </form>
+
+        </div>
+        <p>Activities</p>
+        <div id="activities">
+            {% for i in session['activity'] %}
+            <p>{{i}}</p>
+            {% endfor %}
+        </div>
+
+      <div>
+        <form action="/clear" method="post">
+          <input type="submit" value="Reset">
+        </form>
+      </div>
+    </body>
+
+</html>

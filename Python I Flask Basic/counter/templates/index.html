@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter Assgn.</title>
+    <link rel="text/stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='/js/script.js')}}"></script>
+  </head>
+  <body>
+    <form action="/" method="post">
+      <h3>Counter</h3>
+      <h1>{{x}} times.</h1>
+      <input type="button" name="submit" value="Start Over">
+    </form>
+  </body>
+</html>

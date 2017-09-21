@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  </head>
+  <body>
+    <div>
+      <h2>Counter</h2>
+      <p>{{session['counter']}} times</p>
+      <form action="/plusTwo" method="post">
+        <input type="submit" value="+2">
+      </form>
+      <form action="/reset" method="post">
+        <input type="submit" value="Reset">
+      </form>
+    </div>
+  </body>
+</html>

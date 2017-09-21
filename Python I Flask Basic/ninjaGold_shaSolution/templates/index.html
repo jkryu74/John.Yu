@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Money</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+  </head>
+  <body>
+    <div >
+      <p>Your Gold: </p>
+      <h3>{{session['gold']}}</h3>
+      <form id='restart' action="/restart" method="post">
+        <input id='restartButton' type="submit" value="Restart">
+      </form>
+    </div>
+    <div class="building">
+      <h2>Farm</h2>
+      <p>(earns 10-20 golds)</p>
+      <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm">
+        <input class="button" type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="building">
+      <h2>Cave</h2>
+      <p>(earns 5-10 golds)</p>
+      <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="cave">
+        <input class="button" type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="building">
+      <h2>House</h2>
+      <p>(earns 2-5 golds)</p>
+      <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="house">
+        <input class="button" type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="building">
+      <h2>Casino</h2>
+      <p>(earns/takes 0-50 golds)</p>
+      <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="casino">
+        <input class="button" type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div>
+      <p>Activities: </p>
+      <div id="results" style="height:{{height}}px">
+        {% for item in session['log'] %}
+        {% if item[0] == 'E'%}
+        <h5 style="color:green">{{item}}</h5>
+        {% else %}
+        <h5 style="color:red">{{item}}</h5>
+        {% endif%}
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

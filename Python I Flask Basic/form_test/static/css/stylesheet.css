@@ -1,0 +1,13 @@
+. {
+  margin: none;
+  background-color: none;
+}
+
+form {
+  color: black;
+}
+
+.comments {
+  height: 75px;
+  width: 150px;
+}
