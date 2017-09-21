@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>"Form" Weather App</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('form').submit(function() {
+          var api_key = '38ed520286ab541243ddee4e7fe64fab';
+          var city = $('input.city').val();
+          var state = $('input.state').val();
+            $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_key}`, function(res) {
+            var html = '';
+            html += `<b>For today:</b> ${res['name']}` + ', ' + state;
+            html += `<p>Temperature: ${res['main']['temp']} F</p>`;
+            html += `<p>Weather: ${res['weather'][0]['description']}</p>`
+            html += `<p><img src=./haveNiceDay.jpeg></p><br>`
+              $('div.SFC').append(html);
+            }, 'jsonp');
+            return false;
+            })
+          })
+    </script>
+  </head>
+  <body>
+    <form class="form">
+      <h2>
+        Weather Rain or Shine...
+      </h2>
+      <img src="./sunny.png">
+      <img src="./rainy.png">
+      <br><br><br><br>
+      <label for="city">
+        Please type the name  of City:
+        <input type="text" class="city">
+      </label>
+      <input type="submit" value="submit" class="submit"/>
+      <br><br>
+      <label for="state">
+        Please type the name of State:
+        <input type="text" class="state">
+      </label>
+    </form>
+    <br><br><br><br><br><br>
+    <div class="SFC"></div>
+  </body>
+</html>

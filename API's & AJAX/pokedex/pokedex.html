@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex Assgn</title>
+    <link rel="stylesheet" href="pokedex.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var id = $('#id').val()
+        var url = "http://pokeapi.co/api/v2/pokemon/${id}"
+        var img = "http://pokeapi.co/media/img/${id}.png"
+        for (var id = 1; id < 152; id++) {
+          $('body').append(`<img class="pkClass" src="http://pokeapi.co/media/img/${id}.png" url="http://pokeapi.co/api/v2/pokemon/${id}" alt="HTML5 Icon">`)
+            };
+            $('button').click(function(){
+            event.stopPropagation()
+              $.get($(this).attr(url), function(res) {
+                for (var id = 0; id < 152; id++) {
+                var html =
+                `<fieldset>
+                    <h3> ${res.name} </h3><br>
+                    <p>Type: ${res.types}</p><br>
+                    <p>Height: ${res.height}</p><br>
+                    <p>Weight: ${res.weight}</p>
+                  </fieldset>`
+                $('.pokedex').append(html)
+              };
+            }, 'json');
+          })
+        })
+
+    </script>
+  </head>
+  <body>
+
+    <div class="pokedex">
+      <input id="id" type="number">
+      <button id="id" type="button">Pokemon #:</button><br><br>
+      <fieldset>
+        <h3></h3><br>
+        <p>Type: </p><br>
+        <p>Height: </p><br>
+        <p>Weight: </p>
+      </fieldset>
+    </div>
+
+  </body>
+</html>
