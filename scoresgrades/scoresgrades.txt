@@ -1,0 +1,56 @@
+>>> def grade(x):
+...     for x in grade(x):
+...             if score==range(90,100):
+...                     x==grade[0]
+...             elif score==range(80,89):
+...                     x==grade[1]
+...             elif score==range(70-79):
+...                     x==grade[2]
+...             elif score==range(60,69):
+...                     x==grade[3]
+...             else:
+...                     x==grade[4]
+...     return grade(x)
+...
+>>> for i in range(0,int(10)):
+... 	print "%d \n" %random.randint(0,100)
+
+...
+...
+...
+>>> for i in range(0,int(10)):
+...     print "%d" % random.randint(0,100)
+...
+65
+30
+90
+14
+10
+82
+9
+38
+18
+23
+>>> gradesList = [..]
+print "Scores: , x,; Your grade is, grades(gradeslist(x))
+
+
+import random
+
+def grade(reps):
+    print "Scores and Grades"
+    for x in range(0, reps):
+        score = random.randint(60, 101)
+        if score >= 60 and score <= 69:
+            print "Score: ", score,"; Your grade is D"
+        elif score >= 70 and score <= 79::
+            print "Score: ", score, "; Your grade is C"
+        elif score >= 80 and score <= 89:
+            print "Score: ", score, "; Your grade is B"
+        elif score >= 90 and score <= 100:
+            print "Score: ", score, "; Your grade is A"
+        else:
+            print "You failed"
+    print "End of the program.  Bye!"
+
+grade(10)

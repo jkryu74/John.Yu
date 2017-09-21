@@ -1,0 +1,24 @@
+>>> mySelf = {
+... 'name':'My name is Clyde Drexler',
+
+... 'age':'My age is 25',
+
+... 'location':'My country of origin is Dubai, UN',
+
+... 'language':'My favorite language is Python'
+
+
+... }
+>>> for key in mySelf:
+
+...     print mySelf[key]
+
+...
+My age is 25
+
+
+My name is Clyde Drexler
+
+My favorite language is Python
+
+My country of origin is Dubai, UN

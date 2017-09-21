@@ -1,0 +1,13 @@
+*Compare Lists*
+>>> cmp(list_one, list_two)
+0
+>>> listX= [1,2,5,6,5]
+>>> listY= [1,2,5,6,5,3]
+>>> cmp(list_one, list_two)
+0
+>>> cmp(listX, listY)
+-1
+>>> list1=["celery","carrots","bread","milk"]
+>>> list2=["brocolli","oranges","bread","wheat"]
+>>> cmp(list1, list2)
+1

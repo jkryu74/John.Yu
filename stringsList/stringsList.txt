@@ -1,0 +1,42 @@
+1. Find and Replace
+words = "It's thanksgiving month. It's my birthday, too!"
+
+word = "day"
+
+word2 = "month"
+
+words.find(word, len(words))
+>>>18
+
+words.replace("day", "month", [1])
+>>>"It's thanksgiving month. It's my birthday, too!"
+
+2. Min and Max
+x = [2 ,54 ,-2 ,7 ,12 ,98]
+
+print min(x)
+>>>-2
+print max(x)
+>>>98
+
+3. First and Last
+x = ["hello", 2, 54, -2, 7, 12, 98, "world"]
+y.insert(0, x.pop(0))
+y.insert(1, x.pop(6))
+print y
+>>>['hello', 'world']
+string = " "
+string.join(y)
+print string
+'hello world'
+
+4. New List
+x = [19,2,54,-2,7,12,98,32,10,-3,6]
+x.sort()
+yList=""
+zList=""
+yList=list(x[:5])
+zList=list(x[5:])
+zList.insert(0, yList)
+print xList
+>>>[[-3, -2, 2, 6, 7], 10, 12, 19, 32, 54, 98]
