@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Full Friends</title>
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+    <h2>Here are your Linked Friends</h2>
+    <hr>
+      {% for friend in friends %}
+        <p><b>ID:</b>{{ friend['id'] }}</p>
+        <p><b>FIRSTNAME:</b>{{ friend['firstname'] }}</p>
+        <p><b>LASTNAME:</b>{{ friend['lastname'] }}</p>
+        <p><b>EMAIL:</b>{{ friend['email'] }}</p>
+        <p>CREATED.AT:{{ friend['created_at'] }}</p>
+        <p>UPDATED.AT:{{ friend['updated_at'] }}</p>
+      {% endfor %}
+    <a href="/edit">Edit Friends</a>
+    <hr>
+    <div>
+      <form action="/create" method="post">
+        <h4>Add a Friend:</h4>
+        <label for="first_name">FIRSTNAME:<input id="ID" type="text" name="first_name" placeholder="first name">&nbsp;</label>
+        <label for="last_name">LASTNAME:<input type="text" name="last_name" placeholder="last name">&nbsp;</label>
+        <label for="email">EMAIL:<input type="text" name="email" placeholder="abc@email.com">&nbsp;</label>
+        <input type="submit" name="create">
+      </form><br>
+    </div>
+  </body>
+</html>
