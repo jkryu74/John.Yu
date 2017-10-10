@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email Validation</title>
+  </head>
+  <body>
+  <h3>Please enter a valid Email:</h3>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+    <div class="{{ category }}"><h1>{{ message }}</h1></div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <hr>
+    <ul>
+      {% for email in all_emails %}
+        <li><b>ID:</b>{{ email['id'] }}</li>
+        <li><b>EMAIL:</b>{{ email['email'] }}</li>
+        <li><b>CREATED:</b>{{ email['created_at'] }}</li>
+        <li><b>UPDATED:</b>{{ email['updated_at'] }}</li>
+  <hr>
+      {% endfor %}
+    </ul>
+    <br></br>
+    <form action="/submit" method="post">
+      <label for="">Email Address<input type="text" name="email" placeholder="xyz@alpha.com"></label>
+      <input type="submit" value="Submit">
+    </form>
+    <form action="/delete" method="post">
+      <label for="id">ID No.: <input style="width:10%;" type="text" name="id"></label>
+      <input type="submit" name="del_query">
+    </form>
+  </body>
+</html>
