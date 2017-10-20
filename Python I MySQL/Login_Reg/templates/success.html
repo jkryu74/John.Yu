@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Registration</title>
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+  <h2>Registration Successful! Thank You.</h2>
+    <div>
+      <ul>
+        <h4>Information Received:</h4>
+        {% for login in login_reg %}
+        <li><b>{{ login['firstname'] }} {{ login['lastname'] }}</b></li>
+        <li><b>{{ login['email'] }}</b></li>
+        <li><b>{{ login['username'] }}</b></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>

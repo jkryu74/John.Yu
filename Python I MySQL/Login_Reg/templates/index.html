@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Registration</title>
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+    <h2>Login and Register</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class=flashes>
+        {% for message in messages %}
+          <h1>{{ message }}</h1>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endwith %}
+    <hr>
+    <form action="/useregister" method="post">
+      <ul>
+        <li><label for="firstname">FIRSTNAME: <input type="text" name="firstname" placeholder="First Name"></label></li><br>
+        <li><label for="lastname">LASTNAME: <input type="text" name="lastname" placeholder="Last Name"></label></li><br>
+        <li><label for="email">EMAIL: <input type="text" name="email" placeholder="xyz@lambda.com"></label></li><br>
+        <hr><br></br>
+        <li><label for="username"><b>USERNAME: </b><input type="text" name="username" placeholder="User Name"></label></li><br>
+        <li><label for="password"><b>PASSWORD: </b><input type="text" name="password" placeholder="Password"></label></li><br>
+        <li><label for="pwconf"><b>CONFIRM PW: </b><input type="text" name="confirm" placeholder="Confirm Password"></label> &nbsp;<input type="submit"></li>
+      </ul>
+    </form>
+  </body>
+</html>
