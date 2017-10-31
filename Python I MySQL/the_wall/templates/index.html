@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+    <h2>Login and Register</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class=flashes>
+        {% for message in messages %}
+          <h1>{{ message }}</h1>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endwith %}
+    <hr>
+    <form action="/register" method="post">
+      <h3>Register</h3>
+      <ul>
+        <li><label for="firstname">FIRSTNAME: <input type="text" name="firstname" placeholder="First Name"></label></li><br>
+        <li><label for="lastname">LASTNAME: <input type="text" name="lastname" placeholder="Last Name"></label></li><br>
+        <li><label for="email">EMAIL: <input type="text" name="email" placeholder="xyz@lambda.com"></label></li><br>
+        <li><label for="password">PASSWORD: <input type="text" name="password" placeholder="Password"></label></li><br>
+        <li><label for="pwconf">CONFIRM PW: <input type="text" name="confirm" placeholder="Confirm Password"></label> &nbsp;<input type="submit"></li>
+      </ul>
+    </form>
+    <form action="/wall" method="post">
+      <h3>Log In</h3>
+      <ul>
+        <li><label for="email">Email: <input type="text" name="email" placeholder="Log In"></label></li>
+        <li><label for="password">Password: <input type="text" name="password" placeholder="Password"></label> &nbsp;<input type="submit" value="Log In"></li>
+      </ul>
+    </form>
+  </body>
+</html>
